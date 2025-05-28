@@ -29,19 +29,19 @@
 
 Простейший способ решения: научить программу случайным образом выбирать число до тех пор, пока оно не будет угадано. Этот способ не дает хорошего результата, однако будет для нас хорошей стартовой точкой.
 
-[Посмотреть код реализации](https://github.com/korolmaria1291/data_science_study/blob/main/game_1.py)
+[Посмотреть код реализации](https://github.com/korolmaria1291/data_science_study/blob/main/project_1/game_1.py)
 
 ### Подход 2: Угадывание с коррекцией
 
 Сначала устанавливаем любое случайное число, а потом уменьшаем или увеличиваем его в зависимости от того, больше оно или меньше нужного.
 
-[Посмотреть код реализации](https://github.com/korolmaria1291/data_science_study/blob/main/game_2.py)
+[Посмотреть код реализации](https://github.com/korolmaria1291/data_science_study/blob/main/project_1/game_2.py)
 
 ### Подход 3: Минимизированный до 20 попыток
 
 Необходимо добиться того, чтобы программа угадывала число меньше, чем за 20 попыток.
 
-[Посмотреть код реализации](https://github.com/korolmaria1291/data_science_study/blob/main/game_3.py)
+[Посмотреть код реализации](https://github.com/korolmaria1291/data_science_study/blob/main/project_1/game_3.py)
 
 ---
 
@@ -49,7 +49,7 @@
 
 Эта функция необходима, чтобы определить, за какое число попыток программа угадывает наше число.
 
-[Посмотреть код реализации](https://github.com/korolmaria1291/data_science_study/blob/main/evaluation_function.py)
+[Посмотреть код реализации](https://github.com/korolmaria1291/data_science_study/blob/main/project_1/evaluation_function.py)
 
 ---
 
