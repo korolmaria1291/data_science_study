@@ -76,9 +76,21 @@
 - Этот шаг **не является обязательной частью задания**, а демонстрирует навыки работы с более сложными алгоритмами.  
   *This step is **not part of the mandatory assignment** but demonstrates skills in using more advanced algorithms.* 
 
-Подробнее с ходом работы можно ознакомиться в [PROJECT-5. EDA + Feature Engineering. Kaggle competition](https://github.com/korolmaria1291/data_science_study/blob/main/project_4/Project_4_ML.ipynb)
+Подробнее с ходом работы можно ознакомиться:
+*You can find out more about the progress of the work:*
 
-## Используемые инструменты
+Файл `PROJECT-5. EDA + Feature Engineering. Kaggle competition.ipynb` слишком большой для отображения на GitHub.  
+*The file `PROJECT-5. EDA + Feature Engineering. Kaggle competition.ipynb` is too large to display on GitHub.*
+
+Если хотите ознакомиться с ноутбуком, **скачивайте его [по этой ссылке](https://github.com/korolmaria1291/data_science_study/blob/main/project_5/PROJECT-5.%20EDA%20%2B%20Feature%20Engineering.%20Kaggle%20competition.ipynb)**.
+
+If you want to check out the notebook, **download it [from this link](https://github.com/korolmaria1291/data_science_study/blob/main/project_5/PROJECT-5.%20EDA%20%2B%20Feature%20Engineering.%20Kaggle%20competition.ipynb)**.
+
+Также дополнительный дата сет, используемый в этой работе, можно скачать по этой ссылке: **(https://drive.google.com/file/d/1y-W3DXtaJhHZt3l2PHfOjlO1he-Mc8QW/view?usp=drive_link)**
+
+Also, an additional data set used in this work can be downloaded from this link: **(https://drive.google.com/file/d/1y-W3DXtaJhHZt3l2PHfOjlO1he-Mc8QW/view?usp=drive_link)**
+
+## Используемые инструменты / Tools used
 
 - **Jupyter Notebook**  
 - **Python**  
