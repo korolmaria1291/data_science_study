@@ -8,8 +8,9 @@
 5. [Анализ факторов, влияющих на стоимость недвижимости / Analyzing factors affecting real estate value](#5-анализ-факторов-влияющих-на-стоимость-недвижимости--analyzing-factors-affecting-real-estate-value)
 6. [Построение и обучение моделей / Building and training models](#6-построение-и-обучение-моделей--building-and-training-models)
 7. [Оценка качества моделей и выбор финальной / Assessing model quality and selecting the final model](#7-оценка-качества-моделей-и-выбор-финальной--assessing-model-quality-and-selecting-the-final-model)
-8. [Разработка прототипа веб-сервиса / Developing a web service prototype](#8-разработка-прототипа-веб-сервиса--developing-a-web-service-prototype)
-9. [Структура проекта / Project structure](#9-структура-проекта--project-structure)
+8. [Производительность моделей / Model Performance](#8-производительность-моделей--model-performance)
+9. [Разработка прототипа веб-сервиса / Developing a web service prototype](#9-разработка-прототипа-веб-сервиса--developing-a-web-service-prototype)
+10. [Структура проекта / Project structure](#10-структура-проекта--project-structure)
 
 ---
 
@@ -91,7 +92,24 @@
 
 ---
 
-## 8. Разработка прототипа веб-сервиса / Developing a web service prototype
+## 8. Производительность моделей / Model Performance
+
+| Model | MAE Train | MAE Test | RMSE Train | RMSE Test | R² Train | R² Test |
+|---|---|---|---|---|---|---|
+| **CatBoost Regression** | 0.104 | 0.201 | 0.173 | 0.308 | 0.843 | **0.850** |
+| Gradient Boosting | 0.176 | 0.218 | 0.257 | 0.322 | 0.896 | 0.837 |
+| XGB Regression | 0.217 | 0.240 | 0.315 | 0.348 | 0.953 | 0.809 |
+| Random Forest | 0.171 | 0.239 | 0.259 | 0.356 | 0.895 | 0.801 |
+| Polynomial + Lasso | 0.320 | 0.320 | 0.443 | 0.443 | 0.692 | 0.691 |
+| Linear Regression | 0.407 | 0.407 | 0.542 | 0.540 | 0.540 | 0.542 |
+| Lasso | 0.413 | 0.412 | 0.551 | 0.549 | 0.525 | 0.526 |
+
+- В качестве окончательной модели для развертывания была выбрана **CatBoost Regression**, поскольку она продемонстрировала наилучший баланс между точностью прогнозирования и способностью к обобщению на тестовом наборе данных.
+  *The final model selected for deployment was **CatBoost Regression**, as it demonstrated the best balance between prediction accuracy and generalization ability on the test dataset.*
+
+---
+
+## 9. Разработка прототипа веб-сервиса / Developing a web service prototype
 
 - Подготовка артефактов, создание функции для обработки "сырых" данных, сериализация обученной финальной модели, сохранение признаков модели.
   *Preparing artifacts, creating a function for processing raw data, serializing the trained final model, saving model features.*
@@ -106,12 +124,11 @@
 
 ---
 
-## 9. Структура проекта / Project structure
+## 10. Структура проекта / Project structure
 
 ```text
 project_8/
 │
-├── data_property.csv
 ├── real_estate_project.ipynb
 ├── demonstration_of_fastapi_1.jpeg
 ├── demonstration_of_fastapi_2.jpeg
@@ -140,10 +157,13 @@ project_8/
 
 ## Notebook
 
+Файл обученной модели 'catboost_real_estate.pkl' не включен в репозиторий из-за ограничений GitHub по размеру файлов.
+*The trained model file 'catboost_real_estate.pkl' is not included in the repository due to GitHub file size limitations.*
+
 Подробнее с ходом работы можно ознакомиться:
 *You can find out more about the progress of the work:*
 
-https://github.com/korolmaria1291/data_science_study/blob/main/project_7/PROJECT-7.%20Segmentation%20of%20online%20gift%20shop%20customers.ipynb
+https://github.com/korolmaria1291/data_science_study/blob/main/project_8/real_estate_project.ipynb
 
 ---
 
