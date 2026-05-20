@@ -94,15 +94,20 @@
 
 ## 8. Производительность моделей / Model Performance
 
+## Model performance
+
 | Model | MAE Train | MAE Test | RMSE Train | RMSE Test | R² Train | R² Test |
-|---|---|---|---|---|---|---|
-| **CatBoost Regression** | 0.104 | 0.201 | 0.173 | 0.308 | 0.843 | **0.850** |
-| Gradient Boosting | 0.176 | 0.218 | 0.257 | 0.322 | 0.896 | 0.837 |
-| XGB Regression | 0.217 | 0.240 | 0.315 | 0.348 | 0.953 | 0.809 |
-| Random Forest | 0.171 | 0.239 | 0.259 | 0.356 | 0.895 | 0.801 |
-| Polynomial + Lasso | 0.320 | 0.320 | 0.443 | 0.443 | 0.692 | 0.691 |
-| Linear Regression | 0.407 | 0.407 | 0.542 | 0.540 | 0.540 | 0.542 |
-| Lasso | 0.413 | 0.412 | 0.551 | 0.549 | 0.525 | 0.526 |
+|---|---:|---:|---:|---:|---:|---:|
+| **CatBoost Regression** | 52,322 | 98,320 | 140,204 | 223,736 | 0.904 | 0.756 |
+| **Gradient Boosting** | 83,760 | 105,140 | 185,029 | 229,684 | 0.834 | 0.743 |
+| **XGB Regression** | 102,677 | 113,735 | 223,218 | 245,095 | 0.758 | 0.708 |
+| **Random Forest** | 78,970 | 113,277 | 184,324 | 248,687 | 0.835 | 0.699 |
+| **Polynomial + Lasso** | 149,085 | 149,928 | 300,193 | 322,761 | 0.562 | 0.493 |
+| **Linear Regression** | 183,608 | 183,312 | 343,827 | 343,447 | 0.425 | 0.426 |
+| **Lasso** | 185,545 | 185,216 | 350,244 | 350,270 | 0.404 | 0.403 |
+
+- В процессе обучения целевая переменная была логарифмически преобразована для уменьшения асимметрии и повышения стабильности модели. Итоговые метрики были преобразованы обратно в исходную шкалу цен с помощью функции `np.expm1()` для интерпретации.
+  *The target variable was log-transformed during training to reduce skewness and improve model stability. Final metrics were converted back to the original price scale using `np.expm1()` for interpretation.*
 
 - В качестве окончательной модели для развертывания была выбрана **CatBoost Regression**, поскольку она продемонстрировала наилучший баланс между точностью прогнозирования и способностью к обобщению на тестовом наборе данных.
   *The final model selected for deployment was **CatBoost Regression**, as it demonstrated the best balance between prediction accuracy and generalization ability on the test dataset.*
