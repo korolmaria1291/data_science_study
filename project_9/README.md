@@ -1,134 +1,169 @@
-# # A/B Testing Analysis of Two Landing Page Variants
+# A/B Testing: Analysis of Two Landing Page Variants
 
-## Оглавление / Table of Contents
-1. [Постановка задачи / Statement of the Problem](#1-постановка-задачи--statement-of-the-problem)
-2. [Анализ данных и их предобработка / Data analysis and preprocessing](#2-анализ-данных-и-их-предобработка--data-analysis-and-preprocessing)
-3. [Первичный анализ результатов A/B-тестирования / Initial analysis of A/B testing results](#3-первичный-анализ-результатов-а-в-тестирования--initial-analysis-of-a-b-testing-results)
-4. [Анализ данных на предмет стабилизации метрик / Data analysis for metric stabilization](#4-анализ-данных-на-предмет-стабилизации-метрик--data-analysis-for-metric-stabilization)
-5. [Статистический анализ результатов A/B-тестирования / Statistical analysis of A/B testing results](#5-статистический-анализ-результатов-а-в-тестировния--statistical-analysis-of-a-b-testing-results)
-6. [Общий вывод по результатам A/B-теста / General conclusion based on the A/B test results](#6-общий-вывод-по-результатам-а-в-теста--general-conclusion-based-on-the-a-b-test-result)
+## Table of Contents
 
----
-
-## 1. Постановка задачи / Statement of the Problem
-
-**Бизнес-задача / Business problem**  
-Туристическая фирма планирует запустить новую акцию, чтобы продать как можно больше туров. Команда разработала два варианта посадочной страницы официального сайта и провела A/B-тестирование. В результате эксперимента были собраны данные.
-*A travel agency plans to launch a new promotion to sell as many tours as possible. The team developed two landing page variations for the official website and conducted A/B testing. The experiment yielded the following data.*
-
-**Задача**: проанализировать эффективность обоих вариантов посадочной страницы сразу по двум критериям — **конверсии покупки** и **ежедневному среднему чеку**.
-*Task: Analyze the effectiveness of both landing page variants based on two criteria at once: **purchase conversion** and **average daily check**.*
-
-Нужно убедиться, что A/B-тестирование было проведено корректно, проверить факт стабилизации метрик и обоснованно ответить на ключевой вопрос турагентства: какой вариант посадочной страницы более предпочтителен по метрикам конверсии и ежедневного среднего чека?
-*We need to ensure that the A/B testing was conducted correctly, verify that the metrics have stabilized, and provide a sound answer to the travel agency's key question: which landing page variation is more preferable based on conversion and average daily check metrics?*
-
-Компания предлагает следующие варианты туров:
-
-- Таиланд — 100 000 рублей;
-- Турция — 60 000 рублей;
-- Мальдивы — 200 000 рублей;
-- Санкт-Петербург — 10 000 рублей;
-- Камчатка — 150 000 рублей.
-
-*The company offers the following tour options:
-
-- Thailand — 100,000 rubles;
-- Turkey — 60,000 rubles;
-- Maldives — 200,000 rubles;
-- St. Petersburg — 10,000 rubles;
-- Kamchatka - 150,000 rubles.*
+1. [Statement of the Problem](#1-statement-of-the-problem)
+2. [Data Analysis and Preprocessing](#2-data-analysis-and-preprocessing)
+3. [Initial Analysis of A/B Testing Results](#3-initial-analysis-of-ab-testing-results)
+4. [Metric Stabilization Analysis](#4-metric-stabilization-analysis)
+5. [Statistical Analysis of A/B Testing Results](#5-statistical-analysis-of-ab-testing-results)
+6. [Final Conclusion](#6-final-conclusion)
 
 ---
 
-## 2. Анализ данных и их предобработка / Data analysis and preprocessing
+## 1. Statement of the Problem
 
-- Ознакомление с датасетом, анализ структуры и типов данных  
-  *Exploring the dataset, reviewing its structure and data types*
-- Проверка корректности эксперимента:
-  *Verifying the correctness of the experiment:*
-  - сбалансированность распределения выборки в группах А и В
-   *balanced distribution of the sample in groups A and B*
-  - наличие повторяющихся пользователей в двух группах
-   *presence of duplicate users in two groups*
+### Business Problem
 
----
+A travel agency plans to launch a new promotional campaign to increase tour sales. Two landing page variants were developed and tested using an A/B experiment.
 
-## 3. Первичный анализ результатов A/B-тестирования / Initial analysis of A/B testing results
+### Objective
 
-- Рассчет конверсии и среднего чека в каждой из групп 
-  *Calculation of conversion and average check in each group*
-- Сравнение вариантов A/B по покупательской способности каждого из туров
-  *Comparison of A/B options based on the purchasing power of each tour*
-- Визуализация данных  
-  *Data visualization*
-- Вывод по результатам
-  *Conclusion on the results*
+Analyze the effectiveness of both landing page variants using two key business metrics:
 
----
+- Purchase Conversion Rate
+- Average Order Value (AOV)
 
-## 4. Анализ данных на предмет стабилизации метрик / Data analysis for metric stabilization
+The goal is to verify that the experiment was conducted correctly, evaluate metric stabilization over time, and determine which landing page variant performs better.
 
-- Рассчет ежедневной конверсии и ежедневного среднего чека по группам 
-  *Calculation of daily conversion and daily average check by groups*
-- Рассчет кумулятивных показателей 
-  *Calculation of cumulative indicators*
-- Визуализация графиков кумулятивной конверсии по дням в каждой группе и кумулятивного среднего чека по дням в каждой группе
-  *Visualization of graphs of cumulative conversion by days in each group and cumulative average check by days in each group*
-- Вывод по результатам
-  *Conclusion on the results*
+### Tour Packages
+
+- Thailand — 100,000 RUB
+- Turkey — 60,000 RUB
+- Maldives — 200,000 RUB
+- St. Petersburg — 10,000 RUB
+- Kamchatka — 150,000 RUB
 
 ---
 
-## 5. Статистический анализ результатов A/B-тестирования / Statistical analysis of A/B testing results
+## 2. Data Analysis and Preprocessing
 
-- Определение статистической разницы между конверсиями в группах А и B
-  *Determining the statistical difference between conversions in groups A and B*
-- Определение статистической разницы между ежедневными средними чеками в группах А и B
-  *Determining the statistical difference between the daily average receipts in groups A and B*
-- Построение 95 % доверительные интервалы для конверсий в каждой из групп,
-разницы конверсий в группах и ежедневного среднего чека в каждой из групп 
-  *Constructing 95% confidence intervals for conversions in each group,
-  the difference in conversions between groups, and the daily average order value in each group*
-- Вывод по результатам
-  *Conclusion on the results* 
+### Dataset Exploration
+
+- Review dataset structure and data types
+- Check data quality and consistency
+
+### Experiment Validation
+
+- Verify balanced user distribution between Groups A and B
+- Identify users appearing in both experimental groups
+- Ensure the correctness of the experiment setup
 
 ---
 
-## 6. Общий вывод по результатам A/B-теста / General conclusion based on the A/B test results
+## 3. Initial Analysis of A/B Testing Results
 
-- В ходе A/B-тестирования не было выявлено статистически значимых различий в конверсии между группами A и B: доверительные интервалы пересекаются, а результаты статистического теста не дают оснований отвергнуть нулевую гипотезу.
+### Business Metrics Analysis
 
-В то же время средний чек в группе B оказался статистически значимо выше, чем в группе A: доверительные интервалы не пересекаются, а результаты t-теста подтверждают наличие различий.
+- Calculate conversion rates for both groups
+- Calculate Average Order Value (AOV) for both groups
+- Compare customer purchasing behavior across available tour packages
 
-Таким образом, второй вариант посадочной страницы является более предпочтительным, так как он обеспечивает более высокий средний доход с пользователя.  
-  *The A/B testing revealed no statistically significant differences in conversion rates between Groups A and B: the confidence intervals overlap, and the statistical test results provide no basis to reject the null hypothesis.
+### Data Visualization
 
-  However, the average order value in Group B was statistically significantly higher than in Group A: the confidence intervals do not overlap, and the t-test results confirm the differences.
+- Visualize key performance metrics
+- Compare the performance of Groups A and B
 
-  Therefore, the second landing page variant is preferable, as it yields a higher average revenue per user.*
+### Findings
+
+- Summarize initial observations and business insights
+
+---
+
+## 4. Metric Stabilization Analysis
+
+### Daily Metrics Calculation
+
+- Calculate daily conversion rates
+- Calculate daily Average Order Value (AOV)
+
+### Cumulative Metrics Analysis
+
+- Compute cumulative conversion rates
+- Compute cumulative Average Order Value (AOV)
+
+### Visualization
+
+- Cumulative conversion rate trends by day
+- Cumulative AOV trends by day
+
+### Findings
+
+- Evaluate metric stabilization throughout the experiment
+
+---
+
+## 5. Statistical Analysis of A/B Testing Results
+
+### Hypothesis Testing
+
+- Test for statistically significant differences in conversion rates between Groups A and B
+- Test for statistically significant differences in Average Order Value (AOV) between Groups A and B
+
+### Confidence Intervals
+
+Construct 95% confidence intervals for:
+
+- Conversion rate in Group A
+- Conversion rate in Group B
+- Difference in conversion rates between groups
+- Average Order Value (AOV) in Group A
+- Average Order Value (AOV) in Group B
+
+### Findings
+
+- Interpret statistical test results
+- Evaluate practical business significance
+
+---
+
+## 6. Final Conclusion
+
+The A/B test revealed no statistically significant difference in conversion rates between Groups A and B. Confidence intervals overlap, and the statistical test results provide insufficient evidence to reject the null hypothesis.
+
+However, the Average Order Value (AOV) in Group B was statistically significantly higher than in Group A. The confidence intervals do not overlap, and the t-test confirms the observed difference.
+
+Therefore, Landing Page B is recommended for deployment, as it generates significantly higher revenue per user while maintaining a conversion rate comparable to Landing Page A.
 
 ---
 
 ## Notebook
 
-Подробнее с ходом работы можно ознакомиться:
-*You can find out more about the progress of the work:*
+The complete analysis can be found in the project notebook.
 
-https://github.com/korolmaria1291/data_science_study/blob/main/project_9
-
----
-
-## Данные / Data
-
-Оригинальный датасет:  
-*The original dataset:*
-**(https://github.com/korolmaria1291/data_science_study/blob/main/project_9/ab_data_tourist.csv)**
+[PROJECT-9 A B Testing.ipynb](https://github.com/korolmaria1291/data_science_study/blob/main/project_9/A%20B%20testing.ipynb)
 
 ---
 
-## Используемые инструменты / Tools used
+## Dataset
 
-- **Jupyter Notebook**  
-- **Python**  
-- **pandas, numpy, matplotlib, seaborn**  
-- **scipy**  
+The original dataset used in this project is available in the repository.
+
+[ab_data_tourist.csv](https://github.com/korolmaria1291/data_science_study/blob/main/project_9/ab_data_tourist.csv)
+
+---
+
+## Tools and Technologies
+
+- Python
+- Jupyter Notebook
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- SciPy
+
+---
+
+## Skills Demonstrated
+
+- A/B Testing
+- Statistical Hypothesis Testing
+- Confidence Intervals
+- Conversion Rate Analysis
+- Average Order Value (AOV) Analysis
+- Experimental Design Validation
+- Business Metrics Evaluation
+- Data Visualization
+- Data Preprocessing
+- Exploratory Data Analysis (EDA)
