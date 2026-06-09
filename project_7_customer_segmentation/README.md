@@ -79,10 +79,10 @@
 
 - Визуализация кластеров в виде 3D-диаграммы
   *Visualization of clusters as a 3D chart*
-  (**https://github.com/korolmaria1291/data_science_study/blob/main/project_7/RFM%20Clusters%20of%20Customers.png**)
+  [Clusters of Customers](https://github.com/korolmaria1291/data_science_study/blob/main/project_7_customer_segmentation/RFM%20Clusters%20of%20Customers.png)
 - Построение профиля кластеров **Radar Chart** 
   *Building a cluster profile **Radar Chart***
-  (**https://github.com/korolmaria1291/data_science_study/blob/main/project_7/%D0%A1luster%20profile.png**)
+  [Cluster profile](https://github.com/korolmaria1291/data_science_study/blob/main/project_7_customer_segmentation/%D0%A1luster%20profile.png)
 
 ---
 

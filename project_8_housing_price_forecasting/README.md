@@ -176,7 +176,7 @@ project_8/
 
 Оригинальный датасет:  
 *The original dataset:*
-**(https://drive.google.com/file/d/11-ZNNIdcQ7TbT8Y0nsQ3Q0eiYQP__NIW/view?usp=share_link?)**
+[Data](https://drive.google.com/file/d/11-ZNNIdcQ7TbT8Y0nsQ3Q0eiYQP__NIW/view?usp=share_link?)
 
 ---
 
