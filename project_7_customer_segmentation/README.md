@@ -140,7 +140,7 @@ Three customer segments were identified:
 Подробнее с ходом работы можно ознакомиться:
 *You can find out more about the progress of the work:*
 
-https://github.com/korolmaria1291/data_science_study/blob/main/project_7/PROJECT-7.%20Segmentation%20of%20online%20gift%20shop%20customers.ipynb
+[Project 7 PROJECT-7.Segmentation of online gift shop customers](https://github.com/korolmaria1291/data_science_study/blob/main/project_7_customer_segmentation/PROJECT-7.%20Segmentation%20of%20online%20gift%20shop%20customers.ipynb)
 
 ---
 
@@ -148,7 +148,7 @@ https://github.com/korolmaria1291/data_science_study/blob/main/project_7/PROJECT
 
 Оригинальный датасет:  
 *The original dataset:*
-**(https://github.com/korolmaria1291/data_science_study/blob/main/project_7/data.csv)**
+**[Data](https://github.com/korolmaria1291/data_science_study/blob/main/project_7_customer_segmentation/data.csv)**
 
 ---
 

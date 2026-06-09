@@ -131,7 +131,7 @@ Therefore, Landing Page B is recommended for deployment, as it generates signifi
 
 The complete analysis can be found in the project notebook.
 
-[PROJECT-9 A B Testing.ipynb](https://github.com/korolmaria1291/data_science_study/blob/main/project_9/A%20B%20testing.ipynb)
+[PROJECT-9 A B Testing.ipynb](https://github.com/korolmaria1291/data_science_study/blob/main/project_9_ab_testing/A%20B%20testing.ipynb)
 
 ---
 
@@ -139,7 +139,7 @@ The complete analysis can be found in the project notebook.
 
 The original dataset used in this project is available in the repository.
 
-[ab_data_tourist.csv](https://github.com/korolmaria1291/data_science_study/blob/main/project_9/ab_data_tourist.csv)
+[ab_data_tourist.csv](https://github.com/korolmaria1291/data_science_study/blob/main/project_9_ab_testing/ab_data_tourist.csv)
 
 ---
 

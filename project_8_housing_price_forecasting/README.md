@@ -168,7 +168,7 @@ project_8/
 Подробнее с ходом работы можно ознакомиться:
 *You can find out more about the progress of the work:*
 
-https://github.com/korolmaria1291/data_science_study/blob/main/project_8/real_estate_project.ipynb
+[PROJECT-8 real_estate_project.ipynb](https://github.com/korolmaria1291/data_science_study/blob/main/project_8_housing_price_forecasting/real_estate_project.ipynb)
 
 ---
 
